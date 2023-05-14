@@ -2,7 +2,7 @@ const express=require("express");
 const bodyParser = require("body-parser");
 const mongoose=require("mongoose");
 const _=require("lodash");
-const PORT=process.env.PORT;
+const PORT=process.env.PORT || 3000;
 const app=express();
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
@@ -127,5 +127,5 @@ app.get("/:customListName",function(req,res){
 
 
 app.listen(PORT,function(){
-    console.log("server started on port 3000");
+    console.log("server started on port");
 })
